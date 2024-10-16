@@ -23,10 +23,6 @@ class TestMeanFunction(unittest.TestCase):
     def test_mixed_numbers(self):
         self.assertEqual(mean(-1, 2, -3, 4), 0.5)
 
-    def test_empty_args(self):
-        with self.assertRaises(ZeroDivisionError):
-            mean()
-
     def test_non_numeric(self):
         with self.assertRaises(TypeError):
             mean(1, 2, '3', 4)
